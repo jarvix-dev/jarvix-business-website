@@ -10,7 +10,6 @@ permissions:
   id-token: write
 
 env:
-  # Change if repo name changes. For custom domain: set to '/'
   VITE_BASE: /jarvix-business-website/
 
 jobs:
