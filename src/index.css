@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+body { @apply bg-bg text-text; }
+.container { @apply mx-auto max-w-6xl px-4; }
+a { @apply text-brand hover:text-brand-strong; }
