@@ -38,7 +38,7 @@ export function SiteShell({ children }: PropsWithChildren) {
 
       <footer className="border-t border-line/70 mt-16">
         <div className="container py-10 text-sm text-text-muted flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>© {new Date().getFullYear()} JARVIX • Development: JARVIX • Automatisering/AI implementatie: Stijn</div>
+          <div>© {new Date().getFullYear()} JARVIX • Development: JARVIX • Automatisering/AI implementatie: JARVIX</div>
           <div className="flex gap-4">
             <Link to="/privacy">Privacy</Link>
             <Link to="/terms">Voorwaarden</Link>

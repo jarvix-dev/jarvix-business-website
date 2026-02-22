@@ -6,7 +6,7 @@ We need a fast, professional NL landing page for JARVIX as “Hybrid AI Developm
 ## Objectives
 - Communicate offer in <60 seconds (hero clarity)
 - Drive leads via CTA: “Plan een gratis scan”
-- Explain the 2 pillars (JARVIX dev vs Stijn automation)
+- Explain the 2 pillars (JARVIX dev vs JARVIX automation)
 - Establish trust (process, transparency, privacy)
 
 ## Requirements / Analysis

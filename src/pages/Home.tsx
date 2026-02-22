@@ -11,7 +11,7 @@ export default function Home() {
             Je volgende project sneller live — zonder gedoe.
           </h1>
           <p className="mt-4 text-lg text-text-muted">
-            JARVIX bouwt websites, webapps en MVP’s. Stijn automatiseert processen met low-code en integraties.
+            JARVIX bouwt websites, webapps en MVP’s. JARVIX automatiseert processen met low-code en integraties.
             Geen AI-hype: wél minder handwerk, meer overzicht en een professionele online presence.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -57,7 +57,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="rounded-3xl border border-line bg-card p-7 shadow-soft">
-            <div className="flex items-center gap-2 text-text"><Wrench size={18}/> <h3 className="font-semibold">Pijler 2 — Procesautomatisering & AI (Stijn)</h3></div>
+            <div className="flex items-center gap-2 text-text"><Wrench size={18}/> <h3 className="font-semibold">Pijler 2 — Procesautomatisering & AI (JARVIX)</h3></div>
             <ul className="mt-4 space-y-2 text-text-muted">
               <li>n8n / Power Automate</li>
               <li>Koppelingen / integraties</li>
@@ -69,7 +69,7 @@ export default function Home() {
         <div className="mt-6 rounded-2xl border border-line bg-bg-soft p-6 text-text-muted">
           <div className="flex items-start gap-3">
             <Shield className="text-brand" size={18} />
-            <p><strong className="text-text">Scheiding is belangrijk:</strong> JARVIX doet development. Stijn doet automation/implementatie. Eén team, helder eigenaarschap.</p>
+            <p><strong className="text-text">Scheiding is belangrijk:</strong> JARVIX doet development. JARVIX levert automation/implementatie. Eén team, helder eigenaarschap.</p>
           </div>
         </div>
       </section>
