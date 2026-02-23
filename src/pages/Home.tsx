@@ -1,100 +1,131 @@
 import {
   ArrowRight,
+  BarChart3,
   CheckCircle2,
-  Clock,
   Code2,
   FileText,
-  Globe,
+  Hammer,
+  LayoutDashboard,
   Mail,
-  PlugZap,
-  Repeat2,
+  MessageSquare,
+  PieChart,
   ShoppingCart,
-  Sparkles,
+  Users,
   Wrench,
-  Zap,
+  Zap
 } from 'lucide-react'
 import { SiteShell } from '../components/SiteShell'
 
-/* ─── Pain points ─── */
-const PAIN_POINTS = [
-  { icon: Clock,    text: 'Je verliest uren per week aan handmatig werk dat geautomatiseerd kan worden.' },
-  { icon: Globe,    text: 'Je website is verouderd of trekt nauwelijks klanten aan.' },
-  { icon: FileText, text: 'Offertes, facturen en rapporten maak je nog steeds met de hand.' },
-  { icon: Repeat2,  text: 'Systemen praten niet met elkaar — elk platform een apart eilandje.' },
+/* ─── Doelgroepen ─── */
+const AUDIENCES = [
+  {
+    icon: Hammer,
+    title: 'Bouw & Installatie',
+    desc: 'Van digitale werkbonnen tot projectoverzichten. Stop met papierwerk in de bus.',
+    tags: ['Werkbonnen app', 'Planning', 'Offertes']
+  },
+  {
+    icon: PieChart,
+    title: 'Zakelijke Dienstverlening',
+    desc: 'Accountants, consultants en makelaars. Automatiseer rapportages en klantcommunicatie.',
+    tags: ['Klantportaal', 'Document automation', 'Onboarding']
+  },
+  {
+    icon: ShoppingCart,
+    title: 'Retail & E-commerce',
+    desc: 'Koppel je webshop aan je voorraad en boekhouding. Verkoop meer, beheer minder.',
+    tags: ['Webshop', 'Voorraadkoppeling', 'Klantenservice AI']
+  },
+  {
+    icon: Zap,
+    title: 'Startups & Scale-ups',
+    desc: 'Snel een MVP live om je idee te valideren. Geen maanden ontwikkeltijd, maar weken.',
+    tags: ['MVP', 'SaaS Platform', 'Prototype']
+  }
+]
+
+/* ─── Use Cases ─── */
+const USE_CASES = [
+  {
+    title: 'De "Offerte-Fabriek"',
+    problem: 'Elke offerte kostte 45 minuten typen en knippen/plakken.',
+    solution: 'Een slim formulier dat automatisch een PDF genereert en klaarzet in concept.',
+    result: 'Tijdwinst: 6 uur per week. Foutmarge: 0%.',
+    icon: FileText,
+    color: 'text-amber-400',
+    bg: 'bg-amber-400/10'
+  },
+  {
+    title: 'Het Klantportaal',
+    problem: 'Klanten belden dagelijks: "Wat is de status van mijn order?"',
+    solution: 'Een simpele webapp waar klanten zelf status en documenten inzien.',
+    result: 'Telefoontjes gehalveerd. Klanttevredenheid omhoog.',
+    icon: Users,
+    color: 'text-blue-400',
+    bg: 'bg-blue-400/10'
+  },
+  {
+    title: 'Leads in één overzicht',
+    problem: 'Leads kwamen via mail, telefoon en LinkedIn. Geen overzicht.',
+    solution: 'Alle ingangen gekoppeld aan één centraal dashboard (Notion/Airtable).',
+    result: 'Geen lead meer gemist. Opvolging binnen 24u.',
+    icon: LayoutDashboard,
+    color: 'text-emerald-400',
+    bg: 'bg-emerald-400/10'
+  }
 ]
 
 /* ─── Webdevelopment services ─── */
 const WEB_SERVICES = [
   {
-    icon: Globe,
-    title: 'Zakelijke website',
-    desc: 'Een professioneel visitekaartje dat 24/7 voor je werkt. Snel, duidelijk en mobielvriendelijk.',
+    title: 'Professionele Website',
+    desc: 'Jouw digitale visitekaartje. Snel, veilig en perfect leesbaar op mobiel.',
+    icon: GlobeIcon
   },
   {
-    icon: ShoppingCart,
-    title: 'Webshop',
-    desc: 'Online producten of diensten verkopen met automatische koppeling naar je administratie.',
+    title: 'Webshop / E-commerce',
+    desc: 'Verkoop producten of diensten direct online. Veilig betalen, simpel beheer.',
+    icon: ShoppingCart
   },
   {
-    icon: Code2,
-    title: 'Webapplicatie / intern platform',
-    desc: 'Bijv. een klantportaal, offertetool, planningsboard of intern beheerssysteem op maat.',
+    title: 'Webapplicatie / MVP',
+    desc: 'Een uniek idee? Wij bouwen de software die jouw bedrijfsprocessen draait.',
+    icon: Code2
   },
   {
-    icon: Sparkles,
-    title: 'MVP / prototype',
-    desc: 'Snel testen of een idee werkt — zonder groot budget. Van idee naar werkende demo.',
-  },
+    title: 'Interne Tools',
+    desc: 'Dashboards en tools speciaal voor jouw medewerkers. Maak werk makkelijker.',
+    icon: LayoutDashboard
+  }
 ]
 
 /* ─── Automatisering services ─── */
 const AUTO_SERVICES = [
   {
-    icon: FileText,
-    title: 'Document- en offerteautomatisering',
-    desc: 'Offertes, facturen en rapporten worden automatisch aangemaakt op basis van je data.',
+    title: 'Slimme Koppelingen',
+    desc: 'Laat software met elkaar praten. Bijv. Website → CRM → Boekhouding.',
+    icon: PlugZapIcon
   },
   {
-    icon: PlugZap,
-    title: 'Systeemkoppelingen',
-    desc: 'Je CRM, boekhoudsoftware, e-mail en andere tools werken als één geheel samen.',
+    title: 'Document Automatisering',
+    desc: 'Genereer contracten, offertes en rapporten met één klik.',
+    icon: FileText
   },
   {
-    icon: Repeat2,
-    title: 'E-mail- en notificatieflows',
-    desc: 'Automatische opvolging, herinneringen en meldingen — zonder dat jij iets hoeft te doen.',
+    title: 'E-mail Flows',
+    desc: 'Automatische bevestigingen, reminders en opvolging. Vergeet nooit meer iets.',
+    icon: Mail
   },
   {
-    icon: Zap,
-    title: 'AI-assistent voor je bedrijf',
-    desc: 'Een chatbot of AI-tool die werkt met jouw informatie — voor klanten of intern.',
-  },
+    title: 'AI & Chatbots',
+    desc: 'Een slimme assistent die vragen beantwoordt of teksten schrijft.',
+    icon: MessageSquare
+  }
 ]
 
-/* ─── Stappenplan ─── */
-const STEPS = [
-  { n: '01', title: 'Gratis intake', desc: 'Korte kennismaking van 20–30 min. We snappen jouw situatie en doel voordat we iets voorstellen.' },
-  { n: '02', title: 'Voorstel & prijs', desc: 'Een concreet plan met tijdlijn en eerlijke prijs. Geen verborgen kosten, geen vage uren-tarieven.' },
-  { n: '03', title: 'Bouwen & afstemmen', desc: 'We werken in korte rondes. Jij ziet de voortgang en geeft feedback — geen black box.' },
-  { n: '04', title: 'Live + overdracht', desc: 'Werkende oplossing, volledige overdracht en nazorg. Doorontwikkeling kan altijd.' },
-]
-
-/* ─── Tarieven ─── */
-const PRICES = [
-  { label: 'Zakelijke website',    range: '€1.500 – €3.000',   note: '+ optioneel onderhoudscontract' },
-  { label: 'Webapplicatie / MVP',   range: '€4.000 – €15.000',  note: '+ optioneel onderhoudscontract' },
-  { label: 'Automatisering',        range: '€350 – €2.500',     note: 'afhankelijk van scope + koppelingen' },
-]
-
-/* ─── FAQ ─── */
-const FAQ = [
-  ['Moet ik iets van IT weten?', 'Nee. Wij vertalen jouw doel naar een werkende oplossing. Jij hoeft alleen te weten wat je wilt bereiken.'],
-  ['Hoe lang duurt het?', 'Een eenvoudige website is er in 2–3 weken. Exacte planning bespreken we tijdens de intake.'],
-  ['Werken jullie met bestaande tools?', 'Ja. We koppelen aan wat je al hebt: boekhoudpakket, CRM, e-mail, WhatsApp en meer.'],
-  ['Kan ik later uitbreiden?', 'Altijd. We bouwen modulair zodat uitbreiden eenvoudig en betaalbaar blijft.'],
-  ['Wat kost onderhoud?', 'Dat regelen we via een vaste maandfee. Hoe groot dat is hangt af van de oplossing.'],
-  ['Voor welke sectoren?', 'We werken voor MKB in alle sectoren: bouw, techniek, zakelijke diensten, retail, horeca.'],
-]
+// Icons helpers
+function GlobeIcon(props: any) { return <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> }
+function PlugZapIcon(props: any) { return <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/><path d="M7.5 13.5 2 22l8.5-5.5"/><path d="m20.3 3.7-5.3 5.3 4 4 2.3-2.3a2.4 2.4 0 0 0 0-3.4 2.4 2.4 0 0 0-3.4 0Z"/><path d="M15 11 22 2l-5.5 8.5"/></svg> }
 
 
 export default function Home() {
@@ -105,348 +136,255 @@ export default function Home() {
           HERO
       ══════════════════════════════ */}
       <section
-        className="relative container pt-20 pb-24 sm:pt-28 sm:pb-32 overflow-hidden"
-        style={{ background: 'radial-gradient(ellipse 90% 55% at 50% -5%, rgba(122,162,255,0.14) 0%, transparent 70%)' }}
+        className="relative pt-24 pb-32 overflow-hidden"
+        style={{ background: 'radial-gradient(ellipse 80% 50% at 50% -10%, rgba(122,162,255,0.15) 0%, rgba(11,15,25,0) 80%)' }}
       >
-        <div className="relative z-10 max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-xs text-brand mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand animate-pulse" />
-            Webdevelopment &amp; Automatisering · NL/BE
+        <div className="container relative z-10 text-center max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-4 py-1.5 text-xs font-medium text-brand mb-8 animate-fade-in-up">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
+            </span>
+            Nu beschikbaar voor nieuwe projecten
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-            Je volgende project
-            <br />
-            <span className="text-brand">sneller live</span> — zonder gedoe.
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-text mb-6 leading-tight">
+            Software die je bedrijf <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brand-strong">
+              sneller & slimmer
+            </span> maakt.
           </h1>
 
-          <p className="mt-6 text-lg text-text-muted max-w-2xl leading-relaxed">
-            JARVIX bouwt professionele websites en webapplicaties, en automatiseert bedrijfsprocessen
-            met slimme koppelingen en AI-tools. Geen tech-jargon, wél concrete resultaten.
+          <p className="text-lg sm:text-xl text-text-muted mb-10 max-w-2xl mx-auto leading-relaxed">
+            Wij bouwen websites en webapps die werken. Wij automatiseren het saaie werk.
+            Zodat jij je kunt focussen op wat echt telt: je klanten en je groei.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-6 py-3 text-sm font-semibold text-bg hover:bg-brand-strong transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-brand px-8 py-4 text-base font-semibold text-bg hover:bg-brand-strong hover:scale-[1.02] transition-all shadow-lg shadow-brand/20"
             >
-              Plan een gratis intake <ArrowRight size={16} />
+              Start je project <ArrowRight size={18} />
             </a>
             <a
               href="#diensten"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-card px-6 py-3 text-sm text-text hover:border-brand/50 transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl border border-line bg-card/50 backdrop-blur px-8 py-4 text-base font-medium text-text hover:bg-card hover:border-brand/40 transition-all"
             >
-              Bekijk onze diensten
+              Bekijk diensten
             </a>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            {[
-              '✓ Doorlooptijd in weken',
-              '✓ Vaste prijs, geen verrassingen',
-              '✓ Begrijpelijk voor iedereen',
-            ].map(t => (
-              <span key={t} className="text-sm text-text-muted">{t}</span>
-            ))}
+          {/* Trust signals */}
+          <div className="mt-16 pt-8 border-t border-line/30 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm text-text-muted">
+            <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-brand" /> Snel resultaat</span>
+            <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-brand" /> Geen uurtje-factuurtje verrassingen</span>
+            <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-brand" /> Persoonlijk contact (Stijn)</span>
           </div>
         </div>
       </section>
 
       {/* ══════════════════════════════
-          PIJNPUNTEN
+          VOOR WIE? (DOELGROEPEN)
       ══════════════════════════════ */}
-      <section className="container pb-16">
-        <div className="rounded-3xl border border-line bg-bg-soft p-8 sm:p-10">
-          <h2 className="text-xl font-semibold text-text-muted uppercase tracking-widest text-sm mb-2">Herkenbaar?</h2>
-          <p className="text-2xl font-bold text-text max-w-xl">
-            Veel bedrijven laten tijd en geld liggen door verouderde processen.
+      <section className="container py-20 border-t border-line/50">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-text mb-4">Voor wie werken wij?</h2>
+          <p className="text-text-muted max-w-xl mx-auto">
+            Wij spreken de taal van de ondernemer, niet alleen van de programmeur.
+            Onze oplossingen zijn gemaakt voor de praktijk.
           </p>
+        </div>
 
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {PAIN_POINTS.map(({ icon: Icon, text }) => (
-              <div key={text} className="flex items-start gap-3 rounded-2xl border border-line bg-card p-5">
-                <div className="mt-0.5 rounded-lg bg-brand/10 p-2 shrink-0">
-                  <Icon size={16} className="text-brand" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {AUDIENCES.map((item, i) => (
+            <div key={i} className="group rounded-3xl border border-line bg-card p-6 hover:border-brand/50 transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 rounded-2xl bg-bg-soft border border-line flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <item.icon className="text-text" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-text mb-2">{item.title}</h3>
+              <p className="text-sm text-text-muted mb-5 leading-relaxed">{item.desc}</p>
+              <div className="flex flex-wrap gap-2">
+                {item.tags.map(tag => (
+                  <span key={tag} className="text-[10px] font-medium uppercase tracking-wider text-brand bg-brand/10 px-2 py-1 rounded-md">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ══════════════════════════════
+          USE CASES (RESULTATEN)
+      ══════════════════════════════ */}
+      <section className="container py-20">
+        <div className="rounded-[2.5rem] bg-gradient-to-br from-bg-soft to-card border border-line p-8 md:p-16 relative overflow-hidden">
+          {/* Decorative background blobs */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-brand/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+          
+          <div className="relative z-10">
+            <div className="md:flex items-end justify-between mb-12">
+              <div className="max-w-xl">
+                <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
+                  Wat levert het op?
+                </h2>
+                <p className="text-text-muted text-lg">
+                  Techniek is leuk, maar resultaat is beter. Hier zijn voorbeelden van wat we voor bedrijven realiseren.
+                </p>
+              </div>
+              <a href="#contact" className="hidden md:inline-flex items-center gap-2 text-brand font-medium hover:text-brand-strong transition-colors">
+                Besspreek jouw case <ArrowRight size={16} />
+              </a>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {USE_CASES.map((uc, i) => (
+                <div key={i} className="rounded-3xl bg-bg border border-line p-6 hover:border-brand/30 transition-colors">
+                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 ${uc.bg}`}>
+                    <uc.icon className={uc.color} size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-text mb-2">{uc.title}</h3>
+                  
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <span className="text-red-400 font-medium text-xs uppercase tracking-wide">Probleem</span>
+                      <p className="text-text-muted mt-1">{uc.problem}</p>
+                    </div>
+                    <div>
+                      <span className="text-brand font-medium text-xs uppercase tracking-wide">Oplossing</span>
+                      <p className="text-text-muted mt-1">{uc.solution}</p>
+                    </div>
+                    <div className="pt-3 border-t border-line/50">
+                      <span className="text-emerald-400 font-bold flex items-center gap-2">
+                        <BarChart3 size={14} /> {uc.result}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-text-muted text-sm leading-relaxed">{text}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+            
+            <div className="mt-8 text-center md:hidden">
+              <a href="#contact" className="inline-flex items-center gap-2 text-brand font-medium">
+                Besspreek jouw case <ArrowRight size={16} />
+              </a>
+            </div>
           </div>
-
-          <p className="mt-8 text-text font-medium">
-            Hier lossen wij dat mee op. 👇
-          </p>
         </div>
       </section>
 
       {/* ══════════════════════════════
-          DIENSTEN
+          DIENSTEN (PIJLERS)
       ══════════════════════════════ */}
-      <section id="diensten" className="container pb-20">
-        <div className="text-center mb-12">
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">Onze diensten</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-text">Twee specialisaties. Één team.</h2>
-          <p className="mt-4 text-text-muted max-w-xl mx-auto">
-            We houden de twee domeinen bewust gescheiden, zodat je altijd weet wie waarvoor verantwoordelijk is.
-          </p>
+      <section id="diensten" className="container py-20">
+        <div className="text-center mb-16">
+          <p className="text-brand font-semibold uppercase tracking-widest text-sm mb-3">Onze Expertise</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-text">Twee specialismen. Één doel.</h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-          {/* WEBDEVELOPMENT */}
-          <div className="rounded-3xl border border-brand/25 bg-card shadow-glow overflow-hidden">
-            <div className="p-7 sm:p-8 border-b border-line"
-              style={{ background: 'linear-gradient(135deg, rgba(122,162,255,0.10) 0%, transparent 60%)' }}
-            >
-              <div className="inline-flex items-center gap-2 rounded-full bg-brand/15 text-brand text-xs font-semibold px-3 py-1 mb-4">
-                <Code2 size={12} /> Webdevelopment
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* PIJLER 1: WEBDEVELOPMENT */}
+          <div className="rounded-[2rem] border border-brand/20 bg-card overflow-hidden shadow-soft">
+            <div className="p-8 md:p-10 border-b border-line bg-gradient-to-br from-brand/5 to-transparent">
+              <div className="inline-flex items-center gap-2 rounded-lg bg-brand/10 text-brand px-3 py-1.5 text-xs font-bold uppercase tracking-wider mb-6">
+                <Code2 size={14} /> Development
               </div>
-              <h3 className="text-2xl font-bold text-text">
-                Websites &amp; webapplicaties
-              </h3>
-              <p className="mt-3 text-text-muted leading-relaxed">
-                Van een professionele website tot een volledig maatwerk systeem.
-                Wij bouwen het — jij concentreert je op je bedrijf.
-              </p>
-              <p className="mt-4 text-sm text-text-muted">
-                <span className="text-text font-medium">Geschikt voor:</span>{' '}
-                Bouwbedrijven, installateurs, dienstverleners, startups, retail
+              <h3 className="text-3xl font-bold text-text mb-4">Websites & Software</h3>
+              <p className="text-text-muted text-lg leading-relaxed">
+                Wij bouwen het digitale fundament van je bedrijf. Geen dertien-in-een-dozijn templates, 
+                maar software die precies doet wat jij nodig hebt.
               </p>
             </div>
-
-            <div className="p-7 sm:p-8">
-              <ul className="space-y-4">
-                {WEB_SERVICES.map(({ icon: Icon, title, desc }) => (
-                  <li key={title} className="flex items-start gap-4">
-                    <div className="rounded-xl bg-brand/10 p-2.5 shrink-0 mt-0.5">
-                      <Icon size={16} className="text-brand" />
+            <div className="p-8 md:p-10 bg-bg/50">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
+                {WEB_SERVICES.map((s, i) => (
+                  <div key={i}>
+                    <div className="flex items-center gap-3 mb-2 text-text font-semibold">
+                      <s.icon size={18} className="text-brand" /> {s.title}
                     </div>
-                    <div>
-                      <div className="font-semibold text-text text-sm">{title}</div>
-                      <div className="text-text-muted text-sm mt-1 leading-relaxed">{desc}</div>
-                    </div>
-                  </li>
+                    <p className="text-sm text-text-muted leading-relaxed">{s.desc}</p>
+                  </div>
                 ))}
-              </ul>
-
-              <a
-                href="#contact"
-                className="mt-7 inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-2.5 text-sm font-semibold text-bg hover:bg-brand-strong transition-colors"
-              >
-                Plan een gratis intake <ArrowRight size={14} />
-              </a>
-            </div>
-          </div>
-
-          {/* AUTOMATISERING */}
-          <div
-            className="rounded-3xl border overflow-hidden"
-            style={{ borderColor: 'rgba(245,158,11,0.25)', background: '#101a33', boxShadow: '0 0 60px rgba(245,158,11,0.07)' }}
-          >
-            <div className="p-7 sm:p-8 border-b border-line"
-              style={{ background: 'linear-gradient(135deg, rgba(245,158,11,0.10) 0%, transparent 60%)' }}
-            >
-              <div className="inline-flex items-center gap-2 rounded-full text-xs font-semibold px-3 py-1 mb-4"
-                style={{ background: 'rgba(245,158,11,0.15)', color: '#f59e0b' }}
-              >
-                <Wrench size={12} /> Automatisering
               </div>
-              <h3 className="text-2xl font-bold text-text">
-                Procesautomatisering &amp; AI
-              </h3>
-              <p className="mt-3 text-text-muted leading-relaxed">
-                Handmatige taken die jouw team tijd kosten, automatiseren we stap voor stap.
-                Low-code tools, slimme koppelingen en AI — praktisch en betaalbaar.
-              </p>
-              <p className="mt-4 text-sm text-text-muted">
-                <span className="text-text font-medium">Geschikt voor:</span>{' '}
-                Bedrijven die tijd willen besparen op admin, communicatie en rapportages
+            </div>
+          </div>
+
+          {/* PIJLER 2: AUTOMATISERING */}
+          <div className="rounded-[2rem] border border-amber-500/20 bg-card overflow-hidden shadow-soft">
+            <div className="p-8 md:p-10 border-b border-line bg-gradient-to-br from-amber-500/5 to-transparent">
+              <div className="inline-flex items-center gap-2 rounded-lg bg-amber-500/10 text-amber-500 px-3 py-1.5 text-xs font-bold uppercase tracking-wider mb-6">
+                <Wrench size={14} /> Automatisering
+              </div>
+              <h3 className="text-3xl font-bold text-text mb-4">Proces & AI</h3>
+              <p className="text-text-muted text-lg leading-relaxed">
+                Wij koppelen je systemen en automatiseren het handwerk. Zodat jouw team stopt met 
+                knippen/plakken en tijd overhoudt voor belangrijk werk.
               </p>
             </div>
-
-            <div className="p-7 sm:p-8">
-              <ul className="space-y-4">
-                {AUTO_SERVICES.map(({ icon: Icon, title, desc }) => (
-                  <li key={title} className="flex items-start gap-4">
-                    <div className="rounded-xl p-2.5 shrink-0 mt-0.5"
-                      style={{ background: 'rgba(245,158,11,0.12)' }}
-                    >
-                      <Icon size={16} style={{ color: '#f59e0b' }} />
+            <div className="p-8 md:p-10 bg-bg/50">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
+                {AUTO_SERVICES.map((s, i) => (
+                  <div key={i}>
+                    <div className="flex items-center gap-3 mb-2 text-text font-semibold">
+                      <s.icon size={18} className="text-amber-500" /> {s.title}
                     </div>
-                    <div>
-                      <div className="font-semibold text-text text-sm">{title}</div>
-                      <div className="text-text-muted text-sm mt-1 leading-relaxed">{desc}</div>
-                    </div>
-                  </li>
+                    <p className="text-sm text-text-muted leading-relaxed">{s.desc}</p>
+                  </div>
                 ))}
-              </ul>
-
-              <a
-                href="#contact"
-                className="mt-7 inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-colors"
-                style={{ background: '#f59e0b', color: '#0b0f19' }}
-                onMouseEnter={e => (e.currentTarget.style.background = '#d97706')}
-                onMouseLeave={e => (e.currentTarget.style.background = '#f59e0b')}
-              >
-                Plan een gratis intake <ArrowRight size={14} />
-              </a>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* ══════════════════════════════
-          WERKWIJZE
-      ══════════════════════════════ */}
-      <section id="werkwijze" className="container pb-20">
-        <div className="text-center mb-12">
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">Onze aanpak</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-text">Zo werkt het</h2>
-          <p className="mt-4 text-text-muted max-w-lg mx-auto">
-            Helder proces, geen verrassingen. Van eerste gesprek tot werkende oplossing.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {STEPS.map(({ n, title, desc }, i) => (
-            <div key={n} className="relative rounded-2xl border border-line bg-card p-6">
-              {i < STEPS.length - 1 && (
-                <div className="hidden lg:block absolute top-8 -right-2 w-4 h-px bg-line z-10" />
-              )}
-              <div className="text-3xl font-bold text-brand/30 mb-4">{n}</div>
-              <h3 className="font-semibold text-text mb-2">{title}</h3>
-              <p className="text-text-muted text-sm leading-relaxed">{desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ══════════════════════════════
-          TARIEVEN
-      ══════════════════════════════ */}
-      <section id="prijzen" className="container pb-20">
-        <div className="text-center mb-12">
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">Tarieven</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-text">Wat kost het?</h2>
-          <p className="mt-4 text-text-muted max-w-lg mx-auto">
-            Exacte prijs na een korte intake. Geen uren-tarieven, geen verborgen kosten.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-3xl mx-auto">
-          {PRICES.map(({ label, range, note }) => (
-            <div key={label} className="rounded-3xl border border-line bg-card p-7 shadow-soft text-center">
-              <div className="text-text-muted text-sm mb-3">{label}</div>
-              <div className="text-3xl font-bold text-text">{range}</div>
-              <div className="mt-2 text-xs text-text-muted">{note}</div>
-              <a
-                href="#contact"
-                className="mt-5 inline-flex items-center gap-1 text-sm text-brand hover:underline"
-              >
-                Vraag een offerte aan <ArrowRight size={12} />
-              </a>
-            </div>
-          ))}
-        </div>
-
-        <p className="text-center mt-6 text-xs text-text-muted">
-          Prijzen zijn indicatief excl. BTW. Exacte scope en prijs worden in de intake vastgelegd.
-        </p>
       </section>
 
       {/* ══════════════════════════════
           CONTACT
       ══════════════════════════════ */}
-      <section id="contact" className="container pb-20">
-        <div className="rounded-3xl border border-line bg-bg-soft p-8 sm:p-12">
-          <div className="max-w-2xl mx-auto text-center mb-10">
-            <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">Contact</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-text">Plan een gratis intake</h2>
-            <p className="mt-4 text-text-muted">
-              Vertel kort wat je wilt bouwen of automatiseren. We reageren binnen één werkdag met een concreet voorstel.
-            </p>
-          </div>
+      <section id="contact" className="container py-20 pb-32">
+        <div className="max-w-4xl mx-auto rounded-[2.5rem] border border-line bg-bg-soft p-8 md:p-16 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-6">Klaar om te starten?</h2>
+          <p className="text-text-muted text-lg mb-10 max-w-2xl mx-auto">
+            Plan een gratis intake (20 min). We kijken samen of we je kunnen helpen. 
+            Geen verplichtingen, wel direct advies.
+          </p>
 
-          <form
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto"
-            action="https://formspree.io/f/REPLACE_ME"
+          <form 
+            className="max-w-xl mx-auto space-y-4 text-left"
+            action="https://formspree.io/f/REPLACE_ME" 
             method="POST"
           >
-            <input
-              name="naam"
-              placeholder="Naam *"
-              required
-              className="rounded-xl border border-line bg-card px-4 py-3 text-text placeholder-text-muted focus:outline-none focus:border-brand/60 transition-colors"
-            />
-            <input
-              name="bedrijfsnaam"
-              placeholder="Bedrijfsnaam *"
-              required
-              className="rounded-xl border border-line bg-card px-4 py-3 text-text placeholder-text-muted focus:outline-none focus:border-brand/60 transition-colors"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="E-mailadres *"
-              required
-              className="rounded-xl border border-line bg-card px-4 py-3 text-text placeholder-text-muted focus:outline-none focus:border-brand/60 transition-colors"
-            />
-            <input
-              type="tel"
-              name="telefoon"
-              placeholder="Telefoonnummer (optioneel)"
-              className="rounded-xl border border-line bg-card px-4 py-3 text-text placeholder-text-muted focus:outline-none focus:border-brand/60 transition-colors"
-            />
-            <select
-              name="type"
-              required
-              defaultValue=""
-              className="rounded-xl border border-line bg-card px-4 py-3 text-text md:col-span-2 focus:outline-none focus:border-brand/60 transition-colors"
-            >
-              <option value="" disabled>Waar kan JARVIX je mee helpen? *</option>
-              <option value="website">Website of webshop</option>
-              <option value="webapp">Webapplicatie / intern platform / MVP</option>
-              <option value="automatisering">Procesautomatisering of koppelingen</option>
-              <option value="ai">AI-assistent of chatbot</option>
-              <option value="anders">Anders / weet ik nog niet</option>
-            </select>
-            <textarea
-              name="bericht"
-              placeholder="Omschrijf kort je situatie of wens..."
-              required
-              className="rounded-xl border border-line bg-card px-4 py-3 text-text placeholder-text-muted focus:outline-none focus:border-brand/60 transition-colors md:col-span-2 min-h-[120px] resize-none"
-            />
-            <div className="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-              <button
-                type="submit"
-                className="rounded-xl bg-brand px-6 py-3 text-sm font-semibold text-bg hover:bg-brand-strong transition-colors"
-              >
-                Verstuur bericht
-              </button>
-              <a
-                href="mailto:jarvix.agent@protonmail.com?subject=Gratis%20intake%20JARVIX"
-                className="inline-flex items-center gap-2 rounded-xl border border-line bg-card px-5 py-3 text-sm text-text hover:border-brand/50 transition-colors"
-              >
-                <Mail size={14} /> Of mail direct
-              </a>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input name="naam" required placeholder="Naam" className="w-full rounded-xl border border-line bg-card px-4 py-3 text-text focus:border-brand focus:outline-none transition-colors" />
+              <input name="bedrijf" required placeholder="Bedrijfsnaam" className="w-full rounded-xl border border-line bg-card px-4 py-3 text-text focus:border-brand focus:outline-none transition-colors" />
             </div>
-          </form>
+            <input name="email" type="email" required placeholder="E-mailadres" className="w-full rounded-xl border border-line bg-card px-4 py-3 text-text focus:border-brand focus:outline-none transition-colors" />
+            
+            <div className="space-y-2">
+              <label className="text-xs font-semibold text-text-muted uppercase tracking-wider ml-1">Ik heb interesse in:</label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label className="flex items-center gap-3 p-3 rounded-xl border border-line bg-card cursor-pointer hover:border-brand/50 transition-colors">
+                  <input type="radio" name="interesse" value="website" className="accent-brand" />
+                  <span className="text-sm text-text">Nieuwe Website / App</span>
+                </label>
+                <label className="flex items-center gap-3 p-3 rounded-xl border border-line bg-card cursor-pointer hover:border-brand/50 transition-colors">
+                  <input type="radio" name="interesse" value="automatisering" className="accent-brand" />
+                  <span className="text-sm text-text">Automatisering / AI</span>
+                </label>
+              </div>
+            </div>
 
-          {/* FAQ */}
-          <div className="mt-14 max-w-2xl mx-auto">
-            <h3 className="font-semibold text-text mb-5 text-center">Veelgestelde vragen</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {FAQ.map(([q, a]) => (
-                <div key={q} className="rounded-2xl border border-line bg-card p-5">
-                  <div className="font-medium text-text text-sm flex items-start gap-2">
-                    <CheckCircle2 size={14} className="text-brand shrink-0 mt-0.5" />
-                    {q}
-                  </div>
-                  <div className="mt-2 text-text-muted text-sm leading-relaxed pl-5">{a}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+            <textarea name="bericht" placeholder="Vertel kort iets over je project..." rows={4} className="w-full rounded-xl border border-line bg-card px-4 py-3 text-text focus:border-brand focus:outline-none transition-colors resize-none" />
+            
+            <button type="submit" className="w-full rounded-xl bg-brand px-6 py-4 text-base font-semibold text-bg hover:bg-brand-strong transition-colors shadow-lg shadow-brand/20">
+              Vraag gratis intake aan
+            </button>
+            
+            <p className="text-center text-xs text-text-muted mt-4">
+              Of mail direct naar <a href="mailto:jarvix.agent@protonmail.com" className="text-brand hover:underline">jarvix.agent@protonmail.com</a>
+            </p>
+          </form>
         </div>
       </section>
 
