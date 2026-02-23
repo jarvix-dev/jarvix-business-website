@@ -3,4 +3,26 @@
 @tailwind utilities;
 
 :root { color-scheme: dark; }
-body { background: #0b0f19; color: #e6e8ee; }
+
+/* Global overflow safety and base font settings */
+body {
+  background: #0b0f19;
+  color: #e6e8ee;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6; /* 1.4-1.6 requested */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure images never overflow their container */
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Base button styles to ensure min-height/tap-target */
+button, a[role="button"], .btn {
+  min-height: 44px;
+  touch-action: manipulation;
+}

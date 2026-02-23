@@ -5,6 +5,20 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem', // 16px mobile
+        sm: '1.5rem',    // 24px tablet
+        lg: '2rem',      // 32px desktop
+      },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1200px', // Restrict max width to ~1200px as requested
+      },
+    },
     extend: {
       colors: {
         bg: { DEFAULT: "#0b0f19", soft: "#0f1629" },
@@ -23,6 +37,10 @@ module.exports = {
       backgroundImage: {
         'hero-glow': 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(122,162,255,0.18) 0%, transparent 70%)',
       },
+      fontSize: {
+        'fluid-h1': 'clamp(2.5rem, 5vw + 1rem, 4.5rem)',
+        'fluid-h2': 'clamp(1.75rem, 3vw + 1rem, 3rem)',
+      }
     },
   },
   plugins: [],
