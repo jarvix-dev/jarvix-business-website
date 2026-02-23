@@ -424,7 +424,7 @@ export default function Home() {
                 Verstuur bericht
               </button>
               <a
-                href="mailto:info@jarvix.nl?subject=Gratis%20intake%20JARVIX"
+                href="mailto:jarvix.agent@protonmail.com?subject=Gratis%20intake%20JARVIX"
                 className="inline-flex items-center gap-2 rounded-xl border border-line bg-card px-5 py-3 text-sm text-text hover:border-brand/50 transition-colors"
               >
                 <Mail size={14} /> Of mail direct

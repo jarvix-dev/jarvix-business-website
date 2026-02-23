@@ -44,7 +44,7 @@ export function SiteShell({ children }: PropsWithChildren) {
             <div className="font-semibold text-text mb-1">JARVIX</div>
             <div>Webdevelopment &amp; Automatisering · NL/BE</div>
             <div className="mt-1">
-              <a href="mailto:info@jarvix.nl" className="hover:text-brand transition-colors">info@jarvix.nl</a>
+              <a href="mailto:jarvix.agent@protonmail.com" className="hover:text-brand transition-colors">jarvix.agent@protonmail.com</a>
             </div>
           </div>
           <div className="flex gap-6">
