@@ -6,22 +6,58 @@
 
 /* Global overflow safety and base font settings */
 body {
-  background: #0b0f19;
+  background: #050a14; /* Deep dark blue/black */
   color: #e6e8ee;
   overflow-x: hidden;
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.6; /* 1.4-1.6 requested */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Ensure images never overflow their container */
+/* ─── Cyber Grid Background ─── */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+}
+
+/* ─── Animations ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-enter {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0; /* Start hidden */
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* ─── Glassmorphism Utilities ─── */
+.glass-card {
+  background: rgba(16, 26, 51, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-nav {
+  background: rgba(5, 10, 20, 0.8);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Ensure images never overflow */
 img, video, svg {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Base button styles to ensure min-height/tap-target */
+/* Tap targets */
 button, a[role="button"], .btn {
   min-height: 44px;
   touch-action: manipulation;
