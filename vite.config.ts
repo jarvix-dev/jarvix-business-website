@@ -7,3 +7,4 @@ export default defineConfig({
   plugins: [react()],
   base,
 })
+// force-rebuild 20260223T121921
