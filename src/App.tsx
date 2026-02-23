@@ -7,7 +7,7 @@ function Home() {
         <p className="text-text-muted">JARVIX â¢ Development & Automatisering</p>
         <h1 className="mt-3 text-4xl sm:text-5xl font-semibold">Je volgende project sneller live â zonder gedoe.</h1>
         <p className="mt-4 text-text-muted max-w-2xl">
-          JARVIX bouwt websites, webapps en MVP’s. JARVIX automatiseert processen met low-code en integraties.
+          JARVIX bouwt websites, webapps en MVP's. JARVIX automatiseert processen met low-code en integraties.
         </p>
         <div className="mt-8 flex gap-3">
           <a className="rounded-xl bg-brand px-4 py-2 text-bg" href="#contact">Plan een gratis scan</a>
@@ -28,7 +28,7 @@ function Home() {
             <textarea className="rounded-xl border border-line bg-card p-3 min-h-32" name="bericht" placeholder="Bericht" required />
             <div className="flex gap-3">
               <button className="rounded-xl bg-brand px-4 py-2 text-bg" type="submit">Verstuur</button>
-              <a className="rounded-xl border border-line px-4 py-2" href="mailto:stijnvdpol0@gmail.com?subject=Gratis%20scan%20JARVIX">Mail ons</a>
+              <a className="rounded-xl border border-line px-4 py-2" href="mailto:jarvix.agent@protonmail.com?subject=Gratis%20scan%20JARVIX">Mail ons</a>
             </div>
           </form>
         </div>

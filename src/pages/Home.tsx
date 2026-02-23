@@ -11,7 +11,7 @@ export default function Home() {
             Je volgende project sneller live — zonder gedoe.
           </h1>
           <p className="mt-4 text-lg text-text-muted">
-            JARVIX bouwt websites, webapps en MVP’s. JARVIX automatiseert processen met low-code en integraties.
+            JARVIX bouwt websites, webapps en MVP's. JARVIX automatiseert processen met low-code en integraties.
             Geen AI-hype: wél minder handwerk, meer overzicht en een professionele online presence.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
