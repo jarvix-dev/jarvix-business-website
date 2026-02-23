@@ -4,8 +4,8 @@ function Home() {
   return (
     <div className="min-h-dvh bg-bg text-text">
       <div className="mx-auto max-w-5xl px-4 py-16">
-        <p className="text-text-muted">JARVIX â¢ Development & Automatisering</p>
-        <h1 className="mt-3 text-4xl sm:text-5xl font-semibold">Je volgende project sneller live â zonder gedoe.</h1>
+        <p className="text-text-muted">JARVIX • Development & Automatisering</p>
+        <h1 className="mt-3 text-4xl sm:text-5xl font-semibold">Je volgende project sneller live — zonder gedoe.</h1>
         <p className="mt-4 text-text-muted max-w-2xl">
           JARVIX bouwt websites, webapps en MVP's. JARVIX automatiseert processen met low-code en integraties.
         </p>
