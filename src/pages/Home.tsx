@@ -48,12 +48,6 @@ const AUDIENCES = [
 /* ─── Data: Use Cases ─── */
 const USE_CASES = [
   {
-    title: 'De "Offerte-Fabriek"',
-    tags: ['Automatisering', 'Sales'],
-    stat: '6u/week bespaard',
-    desc: 'Voorheen kostte elke offerte 45 minuten typen. Nu genereert de sales-afdeling met één klik een foutloze PDF op basis van actuele prijzen.',
-  },
-  {
     title: 'Het Klantportaal',
     tags: ['Webapp', 'Service'],
     stat: '-50% telefoontjes',
@@ -64,6 +58,12 @@ const USE_CASES = [
     tags: ['Integratie', 'Marketing'],
     stat: '0 leads gemist',
     desc: 'Aanvragen kwamen via mail, telefoon en LinkedIn binnen. Nu landen ze automatisch in één centraal overzicht met auto-opvolging.',
+  },
+  {
+    title: 'Slimme Werkbonnen',
+    tags: ['Mobiel', 'Administratie'],
+    stat: 'Geen papierwerk meer',
+    desc: 'Buitendienst vult uren en materialen in op hun telefoon. Direct zichtbaar op kantoor en klaar voor facturatie.',
   }
 ]
 
@@ -86,7 +86,7 @@ const SERVICES = [
     accent: 'text-amber-500',
     items: [
       { title: 'Systeemkoppelingen', desc: 'Wij laten uw softwarepakketten met elkaar praten.' },
-      { title: 'Document Generators', desc: 'Offertes, contracten en rapporten met één klik.' },
+      { title: 'Document Generators', desc: 'Rapporten, contracten en bevestigingen met één klik.' },
       { title: 'E-mail Flows', desc: 'Automatische opvolging en status-updates.' },
       { title: 'AI Assistenten', desc: 'Slimme chatbots die uw klantenservice ontlasten.' }
     ]
