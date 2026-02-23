@@ -1,12 +1,6 @@
 import type { PropsWithChildren } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-
-function navClass({ isActive }: { isActive: boolean }) {
-  return isActive
-    ? 'text-text font-medium'
-    : 'text-text-muted hover:text-text transition-colors'
-}
 
 export function SiteShell({ children }: PropsWithChildren) {
   return (
@@ -24,7 +18,7 @@ export function SiteShell({ children }: PropsWithChildren) {
             <a href="#diensten" className="text-text-muted hover:text-text transition-colors">Diensten</a>
             <a href="#werkwijze" className="text-text-muted hover:text-text transition-colors">Aanpak</a>
             <a href="#prijzen" className="text-text-muted hover:text-text transition-colors">Tarieven</a>
-            <NavLink to="/privacy" className={navClass}>Privacy</NavLink>
+            <a href="#contact" className="text-text-muted hover:text-text transition-colors">Contact</a>
           </nav>
 
           <a
