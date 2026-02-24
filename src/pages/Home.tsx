@@ -120,61 +120,6 @@ const USE_CASES = [
   },
 ]
 
-/* ─── Data: Pricing ─── */
-const PACKAGES = [
-  {
-    name: 'Basis Website',
-    price: '€ 799',
-    sub: 'eenmalig',
-    accent: 'border-brand/40',
-    highlight: false,
-    badge: null,
-    features: [
-      'Tot 5 pagina\'s, volledig op maat',
-      'Responsive & snel (Core Web Vitals)',
-      'Contactformulier',
-      'SEO-basisoptimalisatie',
-      'Hosting-advies & domein setup',
-      '30 dagen nazorg',
-    ],
-    cta: 'Start een website',
-  },
-  {
-    name: 'Webapp / MVP',
-    price: '€ 1.999',
-    sub: 'vanaf · eenmalig',
-    accent: 'border-brand',
-    highlight: true,
-    badge: 'Meest gekozen',
-    features: [
-      'Maatwerk webapplicatie of MVP',
-      'Dashboard, portaal of interne tool',
-      'Database & API-integraties',
-      'Inloggen / gebruikersbeheer',
-      'Volledige broncode in uw beheer',
-      '60 dagen nazorg',
-    ],
-    cta: 'Bespreek uw idee',
-  },
-  {
-    name: 'Automatisering',
-    price: '€ 499',
-    sub: 'per flow · vanaf',
-    accent: 'border-amber-500/40',
-    highlight: false,
-    badge: null,
-    features: [
-      'Analyse van huidige processen',
-      'Koppeling tussen systemen (API/Zapier)',
-      'Automatische document-generatie',
-      'E-mail & notificatie-flows',
-      'Documentatie & handleiding',
-      '30 dagen nazorg',
-    ],
-    cta: 'Bekijk mogelijkheden',
-  },
-]
-
 /* ─── Data: FAQ ─── */
 const FAQ_ITEMS = [
   {
@@ -194,8 +139,8 @@ const FAQ_ITEMS = [
     a: 'Ja. We fungeren als integratielaag tussen bestaande tools (Exact, Teamleader, Snelstart, etc.) en uw nieuwe website of applicatie. We vervangen uw huidige software niet — we laten het beter samenwerken.',
   },
   {
-    q: 'Wat kost een project precies?',
-    a: 'Onze pakketten zijn vanaf-prijzen. Na de gratis intake sturen we een vaste offerte. Geen uurtje-factuurtje: u weet op voorhand wat het kost.',
+    q: 'Wat kost een project?',
+    a: 'Dat hangt af van de scope. Na de gratis intake sturen we een vaste offerte op maat. Geen uurtje-factuurtje: u weet op voorhand precies wat het kost en wat u krijgt.',
   },
 ]
 
@@ -491,68 +436,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════════
-          TARIEVEN
-      ══════════════════════════════ */}
-      <section id="prijzen" className="relative z-10 py-24">
-        <div className="container px-6">
-          <div className="text-center mb-14">
-            <span className="text-brand font-semibold uppercase tracking-widest text-xs mb-3 block">Tarieven</span>
-            <h2 className="text-[clamp(1.75rem,3vw,2.5rem)] font-bold text-white mb-4">Helder geprijsd. Geen verrassingen.</h2>
-            <p className="text-slate-400 max-w-xl mx-auto">
-              Vaste prijzen, geen uurtje-factuurtje. U weet op voorhand wat het kost.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {PACKAGES.map((pkg, i) => (
-              <div
-                key={i}
-                className={`relative glass-card rounded-3xl overflow-hidden border transition-all duration-300 hover:-translate-y-1 ${pkg.highlight ? 'border-brand shadow-glow' : pkg.accent}`}
-              >
-                {pkg.badge && (
-                  <div className="absolute top-0 inset-x-0 flex justify-center">
-                    <span className="bg-brand text-white text-[10px] font-bold uppercase tracking-wider px-4 py-1 rounded-b-lg">
-                      {pkg.badge}
-                    </span>
-                  </div>
-                )}
-                <div className={`p-8 ${pkg.badge ? 'pt-10' : ''}`}>
-                  <div className="mb-6">
-                    <div className="text-sm font-semibold text-slate-400 mb-1">{pkg.name}</div>
-                    <div className="flex items-end gap-2">
-                      <span className="text-4xl font-bold text-white">{pkg.price}</span>
-                    </div>
-                    <div className="text-xs text-slate-500 mt-1">{pkg.sub}</div>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {pkg.features.map((f, j) => (
-                      <li key={j} className="flex items-start gap-2 text-sm text-slate-300">
-                        <CheckCircle2 size={15} className={`shrink-0 mt-0.5 ${pkg.highlight ? 'text-brand' : 'text-slate-500'}`} />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="#contact"
-                    className={`w-full min-h-[44px] inline-flex items-center justify-center gap-2 rounded-xl px-5 text-sm font-bold transition-all ${
-                      pkg.highlight
-                        ? 'bg-brand text-white hover:bg-brand-strong shadow-lg shadow-brand/25'
-                        : 'border border-slate-700 text-slate-300 hover:bg-slate-800 hover:border-slate-600'
-                    }`}
-                  >
-                    {pkg.cta} <ArrowRight size={14} />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-center text-xs text-slate-600 mt-8">
-            * Vanaf-prijzen. Definitieve offerte na gratis intake. Alle prijzen excl. BTW.
-          </p>
-        </div>
-      </section>
 
       {/* ══════════════════════════════
           FAQ

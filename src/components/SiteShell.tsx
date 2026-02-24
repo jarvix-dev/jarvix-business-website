@@ -17,7 +17,6 @@ export function SiteShell({ children }: PropsWithChildren) {
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#diensten" className="text-text-muted hover:text-text transition-colors">Diensten</a>
             <a href="#werkwijze" className="text-text-muted hover:text-text transition-colors">Aanpak</a>
-            <a href="#prijzen" className="text-text-muted hover:text-text transition-colors">Tarieven</a>
             <a href="#contact" className="text-text-muted hover:text-text transition-colors">Contact</a>
           </nav>
 
