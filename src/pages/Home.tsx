@@ -10,7 +10,6 @@ import {
   PieChart,
   Rocket,
   ShieldCheck,
-  ShoppingCart,
   Wrench,
   Zap,
 } from 'lucide-react'
@@ -42,14 +41,6 @@ const AUDIENCES = [
     color: 'text-blue-400',
     bg: 'bg-blue-500/10',
     border: 'hover:border-blue-500/30',
-  },
-  {
-    icon: ShoppingCart,
-    title: 'Retail & E-commerce',
-    desc: 'Koppel uw webshop direct aan voorraad en boekhouding. Verkoop meer, beheer minder.',
-    color: 'text-emerald-400',
-    bg: 'bg-emerald-500/10',
-    border: 'hover:border-emerald-500/30',
   },
   {
     icon: Zap,
@@ -389,7 +380,6 @@ export default function Home() {
                   {[
                     { t: 'High-end Websites', d: 'Snel, veilig en pixel-perfect. Uw visitekaartje online.' },
                     { t: 'Webapplicaties & MVP', d: 'Maatwerk software voor uw unieke bedrijfsproces.' },
-                    { t: 'E-commerce', d: 'Webshops die converteren en koppelen met uw backoffice.' },
                     { t: 'Klantportalen', d: 'Beveiligde omgevingen voor uw klanten en teams.' },
                   ].map((item, j) => (
                     <div key={j}>
